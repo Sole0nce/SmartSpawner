@@ -1,0 +1,20 @@
+# SmartSpawner – hologram.yml
+# 显示在每个刷怪笼上方的文本行。支持 &#RRGGBB 十六进制和 &x 颜色代码。
+#
+# 占位符:
+#   {entity}                  – 生物名称
+#   {ᴇɴᴛɪᴛʏ}                 – 小型大写字母 Unicode 形式的生物名称
+#   {stack_size}              – 堆叠数量
+#   {current_exp}             – 已存储经验
+#   {max_exp}                 – 最大经验容量
+#   {used_slots}              – 已用物品格子数
+#   {max_slots}               – 物品格子总数
+#   {percent_storage_decimal} – 存储百分比（1 位小数，例如 "75.5"）
+#   {percent_storage_rounded} – 存储百分比（取整，例如 "76"）
+#   {percent_exp_decimal}     – 经验百分比（1 位小数，例如 "50.0"）
+#   {percent_exp_rounded}     – 经验百分比（取整，例如 "50"）
+
+hologram_text:
+  - '&8[&f{stack_size}&8] &#5DB5F1{entity} 刷怪笼'
+  - '&#5DB5F1• &f经验: &a{current_exp}&f/&a{max_exp}'
+  - '&#5DB5F1• &f物品: &e{used_slots}&f/&e{max_slots}'

@@ -1,0 +1,92 @@
+# SmartSpawner – items.yml
+# 刷怪笼物品显示名称和掉落物名称。
+
+# 智能刷怪笼物品在背包和提示框中的外观
+# 可用占位符: {entity}, {ᴇɴᴛɪᴛʏ}, {exp}, {loot_items}, {amount}, {item_name}, {chance}
+smart_spawner:
+  default:
+    name: '&#5DB5F1{entity} 刷怪笼'
+    loot_items: '  &#ecf0f1 • {amount} {item_name} &#3498db({chance}%)'
+    loot_items_empty: '  &#ecf0f1 •  无'
+    lore:
+      - ''
+      - ' &#5DB5F1 详情:'
+      - '  &#ecf0f1 • &f经验给予: &a{exp}'
+      - ''
+      - ' &#5DB5F1 掉落物:'
+      - '{loot_items}'
+      - ''
+  # 每种实体的分项按 key 覆盖默认值。未指定的 key 使用默认配置。
+  PIG:
+    name: '&#FF77B7{entity} 刷怪笼'
+    loot_items: '  &#FFF0F7 • {amount} {item_name} &#FF8FC7({chance}%)'
+    loot_items_empty: '  &#FFF0F7 •  无'
+    lore:
+      - ''
+      - ' &#FF77B7 详情:'
+      - '  &#FFF0F7 • &f经验给予: &#FF8FC7{exp}'
+      - ''
+      - ' &#FF77B7 掉落物:'
+      - '{loot_items}'
+      - ''
+  BLAZE:
+    name: '&#FFB300{entity} 刷怪笼'
+    loot_items: '  &#FFF4CC • {amount} {item_name} &#FFC107({chance}%)'
+    loot_items_empty: '  &#FFF4CC •  无'
+    lore:
+      - ''
+      - ' &#FFB300 详情:'
+      - '  &#FFF4CC • &f经验给予: &#FFD54F{exp}'
+      - ''
+      - ' &#FFB300 掉落物:'
+      - '{loot_items}'
+      - ''
+
+# 物品刷怪笼物品在背包和提示框中的外观
+# 可用占位符: {entity}, {ᴇɴᴛɪᴛʏ}, {exp}, {loot_items}, {amount}, {item_name}, {chance}
+item_spawner:
+  default:
+    name: '&#5DB5F1{entity} 刷怪笼'
+    loot_items: '  &#ecf0f1 • {amount} {item_name} &#3498db({chance}%)'
+    loot_items_empty: '  &#ecf0f1 •  无'
+    lore:
+      - ''
+      - ' &#5DB5F1 详情:'
+      - '  &#ecf0f1 • &f经验给予: &a{exp}'
+      - ''
+      - ' &#5DB5F1 掉落物:'
+      - '{loot_items}'
+      - ''
+  # 每种材料的的分项按 key 覆盖默认值。未指定的 key 使用默认配置。
+  DIAMOND:
+    name: '&#00E5FF{entity} 刷怪笼'
+    loot_items: '  &#EAFDFF • {amount} {item_name} &#00B8D4({chance}%)'
+    loot_items_empty: '  &#EAFDFF •  无'
+    lore:
+      - ''
+      - ' &#00E5FF 详情:'
+      - '  &#EAFDFF • &f经验给予: &#00B8D4{exp}'
+      - ''
+      - ' &#00E5FF 掉落物:'
+      - '{loot_items}'
+      - ''
+  AMETHYST_SHARD:
+    name: '&#B66CFF{entity} 刷怪笼'
+    loot_items: '  &#F5ECFF • {amount} {item_name} &#D6A5FF({chance}%)'
+    loot_items_empty: '  &#F5ECFF •  无'
+    lore:
+      - ''
+      - ' &#B66CFF 详情:'
+      - '  &#F5ECFF • &f经验给予: &#D6A5FF{exp}'
+      - ''
+      - ' &#B66CFF 掉落物:'
+      - '{loot_items}'
+      - ''
+
+# 原版刷怪笼物品在背包和提示框中的外观
+# 可用占位符: {entity}, {ᴇɴᴛɪᴛʏ}
+# 如果你不想使用自定义原版刷怪笼的名称和 lore，请删除此部分
+vanilla_spawner:
+  default:
+    name: '{entity} 刷怪笼'
+    lore:

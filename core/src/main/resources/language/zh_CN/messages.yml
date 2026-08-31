@@ -1,0 +1,137 @@
+# SmartSpawner – messages.yml
+# 每条记录支持: message, title, subtitle, action_bar, sound, enabled.
+#
+#   消息结构:
+#   message_name:               # 消息唯一标识符
+#     enabled: true/false       # 启用或禁用整条消息（未指定时默认 true）
+#     message: "文本内容"        # 主聊天消息（可选）
+#     title: "标题文本"           # 标题显示（可选）
+#     subtitle: "副标题"         # 副标题显示（可选）
+#     action_bar: "文本"         # 动作栏文本（可选）
+#     sound: sound.effect       # 播放的音效（可选）
+#
+#   主要特性:
+#   - 如果设置了 "enabled: false"，则不会向玩家发送任何组件
+#   - 如果存在多个组件（message、title、action_bar、sound），将全部发送
+#   - 所有组件都是可选的——你可根据需要自由组合
+#   - 如果你只想用其他组件，"message" 字段并非必填，可省略
+
+prefix: '&#3498dbSᴍᴀʀᴛSᴘᴀᴡɴᴇʀ &8⏩ &r'
+
+missing_message_key:
+  message: '&#FF4444缺少消息键: &f{key}'
+
+# ──────────────────────────────────────────────────────
+#              玩家交互（通用）
+# ──────────────────────────────────────────────────────
+spawner_activated:
+  message: '刷怪笼已&a激活。&r你现在可以收集掉落物和经验了。'
+  sound: block.beacon.activate
+
+inventory_full:
+  message: '&#FF4444你的背包已满。'
+
+spawner_storage_empty:
+  message: '&#FF4444刷怪笼的存储空空如也。'
+
+action_in_progress:
+  message: '&#F0C857已经有操作正在进行中，请稍候。'
+  action_bar: '&#F0C857操作进行中，请稍候。'
+
+action_failed:
+  message: '&#FF4444操作失败，请重试。'
+  action_bar: '&#FF4444操作失败，请重试。'
+
+action_not_ready:
+  message: '&#F0C857此操作尚不可用，请在 &f{time}&#F0C857 后重试。'
+  sound: block.note_block.bass
+
+# ──────────────────────────────────────────────────────
+#              刷怪笼 - 主界面交互
+# ──────────────────────────────────────────────────────
+no_exp:
+  message: '&#FF4444没有可用的经验值'
+
+exp_collected:
+  message: '你收集了 &a{exp} &f点经验值。'
+  action_bar: '&a+{exp} 经验'
+
+exp_collected_with_mending:
+  message: '你收集了 &a{exp} &f点经验值。&c{exp_mending} &f已用于经验修补。'
+  action_bar: '&a+{exp} 经验 &f| &c-{exp_mending} 用于经验修补'
+
+# ──────────────────────────────────────────────────────
+#           刷怪笼 - 存储界面交互
+# ──────────────────────────────────────────────────────
+click_too_fast:
+  message: '&#FF4444你点击得太快了。'
+  sound: block.note_block.bass
+
+# ──────────────────────────────────────────────────────
+#             刷怪笼 - 堆叠交互
+# ──────────────────────────────────────────────────────
+spawner_different:
+  message: '&#FF4444要堆叠的刷怪笼必须是同一种类型。'
+  action_bar: '&#FF4444刷怪笼必须是同一种类型。'
+  sound: block.note_block.pling
+
+spawner_stack_full:
+  action_bar: '&#FF4444最大堆叠上限: &f{max}'
+  sound: block.note_block.pling
+
+spawner_stack_success:
+  action_bar: '&a你成功堆叠了 &f{amount} &a个刷怪笼。'
+  sound: entity.player.levelup
+
+# ──────────────────────────────────────────────────────
+#            刷怪笼 - 怪物蛋交互
+# ──────────────────────────────────────────────────────
+entity_changed:
+  message: '刷怪笼已改为生成 &e{entity}&f。'
+  action_bar: '&f刷怪笼已改为生成 &e{entity}&f。'
+  sound: entity.player.levelup
+
+# ──────────────────────────────────────────────────────
+#            刷怪笼 - 破坏交互
+# ──────────────────────────────────────────────────────
+break_no_permission:
+  message: '&#FF4444你没有权限破坏这个刷怪笼。'
+  sound: entity.villager.no
+
+break_silk_touch:
+  message: '&#FF4444破坏这个刷怪笼需要精准采集附魔。'
+  action_bar: '&#FF4444需要精准采集。'
+  sound: item.shield.block
+
+break_tool_required:
+  message: '&#FF4444你无法用这个工具破坏刷怪笼。'
+  action_bar: '&#FF4444无法用这个工具破坏刷怪笼。'
+  sound: item.shield.block
+
+drop_failed:
+  message: '&#FF4444这次运气不佳——刷怪笼没有掉落。'
+  action_bar: '&#FF4444刷怪笼没有掉落。'
+  sound: block.note_block.pling
+
+sneak_break_blocked:
+  message: '&#FF4444当刷怪笼有掉落几率时，你无法破坏整个堆叠。'
+  action_bar: '&#FF4444无法破坏整个堆叠。'
+  sound: block.note_block.pling
+
+# ──────────────────────────────────────────────────────
+#              出售集成消息
+# ──────────────────────────────────────────────────────
+no_sellable_items:
+  message: '&#FF4444没有找到可出售的物品。'
+
+sell_success:
+  message: '你以 &a${price}&f 的价格出售了 &e{amount} &f件物品。'
+  action_bar: '&a+${price}'
+
+sell_and_exp_success:
+  message: '你以 &a${price}&f 的价格出售了 &e{amount} &f件物品，并收集了 &a{exp} &f点经验。'
+  action_bar: '&a+${price} &f| &a+{exp} 经验'
+
+sell_and_exp_success_with_mending:
+  message: '你以 &a${price}&f 的价格出售了 &e{amount} &f件物品，收集了 &a{exp} &f点经验（&c{exp_mending} &f用于经验修补）。'
+  action_bar: '&a+${price} &f| &a+{exp} 经验 &f（&c-{exp_mending} 经验修补）'

@@ -1,0 +1,101 @@
+# SmartSpawner – formatting.yml
+# 插件各处使用的数字格式和生物显示名称。
+
+# ──────────────────────────────────────────────────────
+#                  数字格式
+# ──────────────────────────────────────────────────────
+# 控制大数字在游戏中的显示方式
+format_number:
+  thousand: "{s}千"    # 示例: 5000 → 5千
+  million: "{s}百万"    # 示例: 2000000 → 2百万
+  billion: "{s}十亿"    # 示例: 1500000000 → 15亿
+  trillion: "{s}万亿"    # 示例: 1000000000000 → 1万亿
+  default: "{s}"      # 当没有其他规则匹配时的回退格式
+
+# ──────────────────────────────────────────────────────
+#                  生物显示名称
+# ──────────────────────────────────────────────────────
+# 定义生物名称在刷怪笼界面、物品、全息投影和消息中的显示方式
+mob_names:
+  # 被动生物
+  ALLAY: "悦灵"
+  ARMADILLO: "犰狳"
+  AXOLOTL: "美西螈"
+  BAT: "蝙蝠"
+  BEE: "蜜蜂"
+  CAMEL: "骆驼"
+  CAT: "猫"
+  CHICKEN: "鸡"
+  COD: "鳕鱼"
+  COW: "牛"
+  DOLPHIN: "海豚"
+  DONKEY: "驴"
+  FOX: "狐狸"
+  FROG: "青蛙"
+  GLOW_SQUID: "发光鱿鱼"
+  GOAT: "山羊"
+  HORSE: "马"
+  IRON_GOLEM: "铁傀儡"
+  LLAMA: "羊驼"
+  MOOSHROOM: "哞菇"
+  MULE: "骡"
+  OCELOT: "豹猫"
+  PANDA: "熊猫"
+  PARROT: "鹦鹉"
+  PIG: "猪"
+  POLAR_BEAR: "北极熊"
+  PUFFERFISH: "河豚"
+  RABBIT: "兔子"
+  SALMON: "鲑鱼"
+  SHEEP: "绵羊"
+  SNIFFER: "嗅探者"
+  SNOW_GOLEM: "雪傀儡"
+  SQUID: "鱿鱼"
+  STRIDER: "炽足兽"
+  TADPOLE: "蝌蚪"
+  TRADER_LLAMA: "行商羊驼"
+  TROPICAL_FISH: "热带鱼"
+  TURTLE: "海龟"
+  VILLAGER: "村民"
+  WANDERING_TRADER: "流浪商人"
+  WOLF: "狼"
+
+  # 敌对生物
+  BLAZE: "烈焰人"
+  BOGGED: "沼骸"
+  BREEZE: "旋风人"
+  CAVE_SPIDER: "洞穴蜘蛛"
+  CREAKING: "吱吱怪"
+  CREEPER: "苦力怕"
+  DROWNED: "溺尸"
+  ELDER_GUARDIAN: "远古守卫者"
+  ENDERMAN: "末影人"
+  ENDERMITE: "末影螨"
+  EVOKER: "唤魔者"
+  GHAST: "恶魂"
+  GUARDIAN: "守卫者"
+  HOGLIN: "疣猪兽"
+  HUSK: "尸壳"
+  MAGMA_CUBE: "岩浆怪"
+  PHANTOM: "幻翼"
+  PIGLIN: "猪灵"
+  PIGLIN_BRUTE: "猪灵蛮兵"
+  PILLAGER: "掠夺者"
+  RAVAGER: "劫掠兽"
+  SHULKER: "潜影贝"
+  SILVERFISH: "蠹虫"
+  SKELETON: "骷髅"
+  SKELETON_HORSE: "骷髅马"
+  SLIME: "史莱姆"
+  SPIDER: "蜘蛛"
+  STRAY: "流浪者"
+  VEX: "恼鬼"
+  VINDICATOR: "卫道士"
+  WARDEN: "循声守卫"
+  WITCH: "女巫"
+  WITHER_SKELETON: "凋灵骷髅"
+  ZOGLIN: "僵尸疣猪兽"
+  ZOMBIE: "僵尸"
+  ZOMBIE_HORSE: "僵尸马"
+  ZOMBIE_VILLAGER: "僵尸村民"
+  ZOMBIFIED_PIGLIN: "僵尸猪灵"

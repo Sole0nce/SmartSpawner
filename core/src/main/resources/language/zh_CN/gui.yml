@@ -1,0 +1,302 @@
+# SmartSpawner – gui.yml
+# 界面物品名称、lore、标题和按钮文案。
+
+# ──────────────────────────────────────────────────────
+#                  主界面
+# ──────────────────────────────────────────────────────
+gui_title_main:
+  single_spawner: '{ᴇɴᴛɪᴛʏ} 刷怪笼'
+  stacked_spawner: '{amount} 个{ᴇɴᴛɪᴛʏ}刷怪笼'
+
+spawner_storage_item:
+  # name 可用的占位符:
+  # {max_slots} - 存储最大格子数（千分位格式化）
+  # {current_items} - 存储中当前物品数量
+  # {percent_storage_rounded} - 存储已用百分比（0-100 取整）
+  # {total_sell_price} - 当前刷怪笼中存储物品的总出售价值
+  # {entity} - 刷怪笼实体类型（正常首字母大写）
+  # {ᴇɴᴛɪᴛʏ} - 刷怪笼实体类型（小型大写字母）
+  name: '&f打开 &#5DB5F1存储'
+
+  # 所有 lore 行可用的占位符:
+  # {max_slots} - 存储最大格子数（千分位格式化）
+  # {current_items} - 存储中当前物品数量
+  # {percent_storage_rounded} - 存储已用百分比（0-100 取整）
+  # {total_sell_price} - 当前刷怪笼中存储物品的总出售价值
+  # {loot_items} - 完整的战利品物品格式化列表
+  # {entity} - 刷怪笼实体类型（正常首字母大写）
+  # {ᴇɴᴛɪᴛʏ} - 刷怪笼实体类型（小型大写字母）
+  lore:
+    - ''
+    - ' &#5DB5F1ℹ 信息:'
+    - '  &8• &f你可以在此查看'
+    - '   &f并管理该刷怪笼'
+    - '   &f存储的所有物品。'
+    - ''
+    - ' &#5DB5F1★ 容量: &f{percent_storage_rounded}%'
+    - '{loot_items}'
+    - ''
+    - '&#5DB5F1 ▸ 点击打开存储！'
+
+  # 这定义使用 {loot_items} 时每种战利品物品的显示方式
+  # 每种战利品可用的占位符:
+  # {item_name} - 物品名称（正常首字母大写）
+  # {amount} - 物品数量（千分位格式化）
+  # {raw_amount} - 物品数量（无格式化）
+  # {chance} - 该物品掉落几率（含 %，例如 "8.5%"）
+  loot_items: '  &8• &f{item_name}&f: &e{amount}'
+  loot_items_empty: '  &8• &f未存储任何物品'
+
+
+# 可用的占位符:
+# {entity}           - 格式化后的实体名称（例如"僵尸"）
+# {ᴇɴᴛɪᴛʏ}           - 小型大写形式的实体名称
+# {stack_size}       - 该位置堆叠的刷怪笼数量
+# {range}            - 生成范围（格）
+# {delay}            - 生成延迟（秒）
+# {min_mobs}         - 最少生成生物数量
+# {max_mobs}         - 最多生成生物数量
+# {current_items}    - 当前存储的物品数量
+# {max_items}        - 物品最大存储容量
+# {percent_storage_rounded}  - 存储使用率（整数百分比，例如 "87"）
+# {percent_storage_decimal} - 存储使用率（带小数的百分比，例如 "87.5"）
+# {current_exp}      - 当前存储的经验值（千分位格式化）
+# {max_exp}          - 最大经验值容量（千分位格式化）
+# {raw_current_exp}  - 原始当前经验值
+# {raw_max_exp}      - 原始最大经验值
+# {percent_exp_rounded}      - 经验存储使用率（整数百分比）
+# {percent_exp_decimal}    - 经验存储使用率（带小数的百分比，例如 "42.7"）
+# {time}             - 距下次生成的时间，或在未激活/已满/无战利品时显示的状态文本
+# {total_sell_price} - 当前刷怪笼中存储物品的总出售价值
+spawner_info_item:
+  name: ' &f刷怪笼 &#5DB5F1信息'
+  lore:
+    - ''
+    - ' &#5DB5F1ℹ 状态:'
+    - '   &8• &f堆叠: &e{stack_size}'
+    - '   &8• &f范围: &e{range} &f格'
+    - '   &8• &f生物: &e{min_mobs}&f-&e{max_mobs}'
+    - '   &8• &f延迟: &e{delay} &f秒'
+    - ''
+    - ' &#5DB5F1★ 下次生成: &f{time}'
+    - '   &8• &f经验: &e{percent_exp_rounded}%'
+    - '   &8• &f存储: &e{percent_storage_rounded}%'
+    - '   &8• &f出售价值: &a${total_sell_price}'
+    - ''
+    - '&#5DB5F1 ▸ 左键点击: &f出售并收集经验'
+  lore_no_shop:
+    - ''
+    - ' &#5DB5F1ℹ 状态:'
+    - '   &8• &f堆叠: &e{stack_size}'
+    - '   &8• &f范围: &e{range} &f格'
+    - '   &8• &f生物: &e{min_mobs}&f-&e{max_mobs}'
+    - '   &8• &f延迟: &e{delay} &f秒'
+    - ''
+    - ' &#5DB5F1★ 下次生成: &f{time}'
+    - '   &8• &f经验: &e{percent_exp_rounded}%'
+    - '   &8• &f存储: &e{percent_storage_rounded}%'
+    - ''
+  lore_full: '&#FF4444容量已满'
+  lore_inactive: '&#FF4444未激活'
+  lore_no_loot: '&#FF4444未配置掉落物'
+
+exp_info_item:
+  name: '&f收集 &#5DB5F1经验'
+  lore:
+    - ''
+    - ' &#5DB5F1ℹ 信息:'
+    - '  &8• &f收集经验或使用'
+    - '   &f经验来修复你的'
+    - '   &f经验修补 &f装备。'
+    - ''
+    - ' &#5DB5F1★ 容量: &f{percent_exp_rounded}%'
+    - '  &8• &f已存经验: &a{current_exp}&f/&a{max_exp}'
+    - ''
+    - '&#5DB5F1 ▸ 点击收集经验！'
+
+# ──────────────────────────────────────────────────────
+#                出售确认界面
+# ──────────────────────────────────────────────────────
+gui_title_sell_confirm: '确认出售'
+
+button_sell_cancel:
+  name: '&f取消 &#FF6B6B出售'
+  lore:
+    - ''
+    - ' &#FF6B6B⚠ 信息:'
+    - '  &8• &f点击返回，'
+    - '   &f不出售任何物品。'
+    - ''
+    - '&#FF6B6B ▸ 点击取消！'
+
+button_sell_confirm:
+  name: '&f确认 &#5DB5F1出售'
+  lore:
+    - ''
+    - ' &#5DB5F1ℹ 你将获得:'
+    - '  &8• &f金钱: &a${total_sell_price}'
+    - ''
+    - '&#5DB5F1 ▸ 点击确认出售！'
+
+button_sell_confirm_with_exp:
+  name: '&f确认出售 &#5DB5F1并收集经验'
+  lore:
+    - ''
+    - ' &#5DB5F1ℹ 你将获得:'
+    - '  &8• &f金钱: &a${total_sell_price}'
+    - '  &8• &f经验: &a{current_exp}'
+    - ''
+    - '&#5DB5F1 ▸ 点击确认！'
+
+# button_sell_info 可用的占位符:
+# {entity} - 格式化后的实体或物品名称
+# {ᴇɴᴛɪᴛʏ} - 小型大写形式的实体或物品名称
+# {current_items} - 已使用的存储格子数
+# {max_items} - 最大存储格子数
+# {current_exp} - 已存储的经验值
+# {total_sell_price} - 总出售价值
+# {percent_storage_decimal} - 存储使用率（1 位小数，例如 "87.5"）
+# {percent_storage_rounded} - 存储使用率（四舍五入为整数，例如 "88"）
+# {loot_items} - 展开为生成好的战利品行
+# button_sell_info.loot_items 的占位符: {amount}, {item_name}, {chance}
+button_sell_info:
+  name: '&f出售 &#5DB5F1汇总'
+  lore:
+    - ''
+    - ' &#5DB5F1ℹ 信息:'
+    - '{loot_items}'
+    - '  &8• &a+ &f经验: &e{current_exp}'
+    - '  &8• &a+ &f金钱: &a${total_sell_price}'
+  loot_items: '  &8• &#FF6B6B- &f{item_name}&f: &e{amount}'
+  loot_items_empty: '  &8• &#FF6B6B- &f没有可出售的物品'
+
+# ──────────────────────────────────────────────────────
+#             刷怪笼存储界面
+# ──────────────────────────────────────────────────────
+# gui_title_storage 可用的占位符:
+# {current_page}     - 当前页码
+# {total_pages}      - 总页数
+# {entity}           - 格式化后的实体名称（例如"僵尸"）
+# {ᴇɴᴛɪᴛʏ}           - 小型大写形式的实体名称
+# {amount}           - 堆叠的刷怪笼数量
+gui_title_storage: '[{current_page}/{total_pages}] 刷怪笼存储'
+
+navigation_button_previous:
+  name: '&#37eb9a上一页'
+  lore:
+    - '&#2cc483 ▸ &#f8f8ff点击跳转到第 &#37eb9a{target_page} 页'
+
+navigation_button_next:
+  name: '&#37eb9a下一页'
+  lore:
+    - '&#2cc483 ▸ &#f8f8ff点击跳转到第 &#37eb9a{target_page} 页'
+
+sell_button:
+  name: '&f出售 &a物品'
+  lore:
+    - ''
+    - ' &aℹ 信息:'
+    - '  &8• &f你将出售存储中'
+    - '   &f的所有物品。'
+    - ''
+    - '&a ▸ 点击出售！'
+
+sell_and_exp_button:
+  name: '&f出售并 &a收集经验'
+  lore:
+    - ''
+    - ' &aℹ 信息:'
+    - '  &8• &f你将出售所有物品'
+    - '   &f并收集存储的经验。'
+    - '  &8• &f预计总计: &a${total_sell_price}'
+    - ''
+    - '&a ▸ 点击继续！'
+
+return_button:
+  name: '&f返回 &#FF6B6B主菜单'
+  lore:
+    - ''
+    - ' &#dadadaℹ 信息:'
+    - '  &8• &f点击返回'
+    - '   &f上一个菜单。'
+    - ''
+    - '&c ▸ 点击返回！'
+
+take_all_button:
+  name: '&f全部 &#5DB5F1拿走'
+  lore:
+    - ''
+    - ' &#5DB5F1ℹ 信息:'
+    - '  &8• &f你将拿走本页'
+    - '   &f的所有物品。'
+    - ''
+    - '&#5DB5F1 ▸ 点击拿走！'
+
+item_filter_button:
+  name: '&f过滤 &#5DB5F1掉落物'
+  lore:
+    - ''
+    - ' &#5DB5F1ℹ 信息:'
+    - '  &8• &f配置此刷怪笼允许'
+    - '   &f和禁止的物品。'
+    - ''
+    - '&#5DB5F1 ▸ 点击配置过滤器！'
+
+sort_items_button:
+  name: '&f排序 &#5DB5F1物品'
+  lore:
+    - ''
+    - '{available_items}'
+    - ''
+    - '&#5DB5F1 ▸ 点击排序！'
+  selected_item: ' &#5DB5F1• {item_name}'
+  unselected_item: ' &f• {item_name}'
+  no_item: ' &7• 无'
+
+drop_page_button:
+  name: '&f丢弃 &#FF6B6B本页'
+  lore:
+    - ''
+    - ' &#FF6B6B⚠ 警告:'
+    - '  &8• &f你将会把本页的'
+    - '   &f所有物品丢到地上。'
+    - ''
+    - '&#FF6B6B ▸ 点击丢弃！'
+
+collect_exp_button:
+  name: '&f收集 &#5DB5F1经验'
+  lore:
+    - ''
+    - ' &#5DB5F1ℹ 信息:'
+    - '  &8• &f可用经验: &a{current_exp}'
+    - ''
+    - '&#5DB5F1 ▸ 点击收集！'
+
+storage_spawner_info_button:
+  name: ''
+  lore:
+
+# ──────────────────────────────────────────────────────
+#             过滤器配置界面
+# ──────────────────────────────────────────────────────
+gui_title_filter_config: '    允许          禁止'
+
+filter_divider:
+  name: '&f掉落物 &#5DB5F1过滤器'
+  lore:
+    - ''
+    - ' &#5DB5F1ℹ 信息:'
+    - '  &8• &f左侧: 允许的物品'
+    - '  &8• &f右侧: 禁止的物品'
+    - ''
+    - '&#5DB5F1 ▸ 点击返回存储！'
+
+filter_item_allowed:
+  name: '&f{item_name}&#37eb9a 已允许'
+  lore:
+    - '&#37eb9a ▸ &f点击禁止此物品！'
+
+filter_item_blocked:
+  name: '&f{item_name}&#FF6B6B 已禁止'
+  lore:
+    - '&#FF6B6B ▸ &f点击允许此物品！'
