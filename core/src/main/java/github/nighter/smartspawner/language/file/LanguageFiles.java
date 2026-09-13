@@ -16,7 +16,8 @@ public final class LanguageFiles {
             "en_US_DonutSMP_v2",
             "tr_TR",
             "vi_VN",
-            "zh_CN"
+            "zh_CN",
+            "es_ES"
     );
 
     private final JavaPlugin plugin;
